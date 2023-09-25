@@ -6,7 +6,10 @@ import * as React from 'react'
 function MessagesDisplay({messages}) {
   const containerRef = React.useRef()
   // 🐨 replace useEffect with useLayoutEffect
-  React.useEffect(() => {
+  // React.useEffect(() => {
+  //   containerRef.current.scrollTop = containerRef.current.scrollHeight
+  // })
+  React.useLayoutEffect(() => {
     containerRef.current.scrollTop = containerRef.current.scrollHeight
   })
 
